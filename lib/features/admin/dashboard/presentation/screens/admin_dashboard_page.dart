@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/dashboard_card.dart';
+import '../screens/JobPostingsScreen.dart';
 
 class AdminDashboardPage extends StatelessWidget {
   const AdminDashboardPage({super.key});
@@ -51,7 +52,14 @@ class AdminDashboardPage extends StatelessWidget {
                       DashboardCard(
                         icon: Icons.work_outline,
                         title: 'Manage Job Postings',
-                        onTap: () {},
+                        onTap: () {
+                        //   print('Manage Job Postings card was tapped!');
+                        Navigator.push(
+                                context,
+                          MaterialPageRoute(builder: (context) => JobPostingsScreen()),
+                          );
+
+                        },
                       ),
                       DashboardCard(
                         icon: Icons.people_alt_outlined,
